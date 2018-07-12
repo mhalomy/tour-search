@@ -5,7 +5,7 @@ class TourImage extends Component {
   renderImages(props) {
     const {tour} = props;
     return (
-      <div key={tour.id} >
+      <div>
         <div>
           <img src={tour.tour_image} style={{width: 232}} alt="" />
         </div>
