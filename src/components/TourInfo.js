@@ -4,7 +4,7 @@ class TourInfo extends Component {
 
   renderInfoLabel(props) {
     return (
-      <div>
+      <div style={styles.labelWrapper} >
         <div>DESTINATIONS</div>
         <div>STARTS/ENDS IN</div>
         <div>AGE RANGE</div>
@@ -39,9 +39,9 @@ class TourInfo extends Component {
     const {tour} = this.props;
     return (
       <div>
-        <div>{tour.tour_name}</div>
-        <div>{tour.description}</div>
-        <div style={styles.labelWrapper} >
+        <div style={styles.tourName} >{tour.tour_name}</div>
+        <div style={styles.tourDesc} >{tour.description}</div>
+        <div style={styles.labelAndValueWrapper} >
           {this.renderInfoLabel(this.props)}
           {this.renderInfoValue(this.props)}
         </div>
@@ -51,8 +51,19 @@ class TourInfo extends Component {
 }
 
 const styles = {
-  labelWrapper: {
+  labelAndValueWrapper: {
     display: 'flex'
+  },
+  labelWrapper: {
+    fontSize: '0.714em',
+    color: '#818d99'
+  },
+  tourName: {
+    fontSize: '1.286em',
+    fontWeight: '700',
+  },
+  tourDesc: {
+    fontSize: '1em'
   }
 }
 

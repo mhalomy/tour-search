@@ -7,11 +7,11 @@ const TourPriceAndLength = (props) => {
       <div style={styles.priceWrapper} >
         <div>
           <div>Our saving</div>
-          <div>€{tour.saving}</div>
+          <div style={styles.savingPrice} >€{tour.saving}</div>
         </div>
         <div>
           <div style={styles.fromItems} >From</div>
-          <div style={styles.fromItems} >€ {tour.price}</div>
+          <div style={styles.fromItems, styles.tourPrice} >€ {tour.price}</div>
         </div>
       </div>
       <div style={styles.lengthItem} >
@@ -32,7 +32,16 @@ const styles = {
     textAlign: 'right'
   },
   lengthItem: {
-    textAlign: 'center'
+    textAlign: 'center',
+    fontSize: '1.286em',
+    fontWeight: '700'
+  },
+  savingPrice: {
+    fontSize: '1.286em'
+  },
+  tourPrice: {
+    fontSize: '1.286em',
+    fontWeight: '700'
   }
 }
 
