@@ -17,7 +17,14 @@ const TourItem = (props) => {
 const styles = {
   wrapper: {
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    minHeight: '246px',
+    maxWidth: '850px',
+    background: 'white',
+    marginBottom: '28px',
+    marginLeft: '14px',
+    marginRight: '14px'
   }
 }
 

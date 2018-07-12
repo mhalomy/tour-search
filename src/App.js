@@ -23,14 +23,7 @@ class App extends Component {
     fetch('https://api.myjson.com/bins/18x6yt')
       .then(res => res.json())
       .then(tours => this.setState({tours}));
-    // if(this.result.length) {
-    //   this.setState({result: this.result})
-    // }
   }
-
-  // componentWillUpdate() {
-  //   this.performSearch();
-  // }
 
   onTermChange(event) {
     this.setState({term: event.target.value.capitalize()})

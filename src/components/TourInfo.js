@@ -17,7 +17,7 @@ class TourInfo extends Component {
   renderInfoValue(props) {
     const {tour} = props;
     return (
-      <div>
+      <div style={styles.valueWrapper} >
         <div>{this.calculateDestinations(tour)}</div>
         <div>{this.calculateStartEnd(tour)}</div>
         <div>{tour.age_from} to {tour.age_to} year olds</div>
@@ -38,9 +38,9 @@ class TourInfo extends Component {
   render() {
     const {tour} = this.props;
     return (
-      <div>
+      <div style={styles.mainWrapper} >
         <div style={styles.tourName} >{tour.tour_name}</div>
-        <div style={styles.tourDesc} >{tour.description}</div>
+        <p style={styles.tourDesc} >{tour.description}</p>
         <div style={styles.labelAndValueWrapper} >
           {this.renderInfoLabel(this.props)}
           {this.renderInfoValue(this.props)}
@@ -51,19 +51,29 @@ class TourInfo extends Component {
 }
 
 const styles = {
+  mainWrapper: {
+    padding: '16px'
+  },
   labelAndValueWrapper: {
-    display: 'flex'
+    display: 'flex',
+    lineHeight: '18px'
   },
   labelWrapper: {
     fontSize: '0.714em',
-    color: '#818d99'
+    color: '#818d99',
+    marginRight: '10px'
+  },
+  valueWrapper: {
+    fontSize: '0.857em'
   },
   tourName: {
     fontSize: '1.286em',
     fontWeight: '700',
+    lineHeight: '20px'
   },
   tourDesc: {
-    fontSize: '1em'
+    fontSize: '1em',
+    lineHeight: '20px'
   }
 }
 
