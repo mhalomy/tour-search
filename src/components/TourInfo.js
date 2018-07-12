@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class TourInfo extends Component {
 
   renderInfoLabel(props) {
-    const {tour} = props;
     return (
       <div>
         <div>DESTINATIONS</div>
