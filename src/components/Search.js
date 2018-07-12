@@ -1,10 +1,14 @@
 import React from 'react';
 
 const Search = (props) => {
-  const {onChange, placeholder, value} = props;
+  const {onChange, placeholder, value, onKeyPress} = props;
   return (
     <div>
-      <input onChange={onChange} placeholder={placeholder} value={value} />
+      <input
+        onChange={onChange}
+        placeholder={placeholder}
+        value={value}
+        onKeyPress={onKeyPress} />
     </div>
   );
 }
