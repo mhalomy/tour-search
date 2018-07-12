@@ -6,12 +6,19 @@ import TourPriceAndLength from './TourPriceAndLength';
 const TourItem = (props) => {
   const {tour} = props;
   return (
-    <div>
+    <div style={styles.wrapper} >
       <TourImage tour={tour} />
       <TourInfo tour={tour} />
       <TourPriceAndLength tour={tour} />
     </div>
   );
+}
+
+const styles = {
+  wrapper: {
+    display: 'flex',
+    flexWrap: 'wrap'
+  }
 }
 
 export default TourItem;

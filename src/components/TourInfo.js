@@ -41,10 +41,18 @@ class TourInfo extends Component {
       <div>
         <div>{tour.tour_name}</div>
         <div>{tour.description}</div>
-        {this.renderInfoLabel(this.props)}
-        {this.renderInfoValue(this.props)}
+        <div style={styles.labelWrapper} >
+          {this.renderInfoLabel(this.props)}
+          {this.renderInfoValue(this.props)}
+        </div>
       </div>
     );
+  }
+}
+
+const styles = {
+  labelWrapper: {
+    display: 'flex'
   }
 }
 
