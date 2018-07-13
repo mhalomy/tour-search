@@ -24,6 +24,7 @@ const TourPriceAndLength = (props) => {
 const styles = {
   mainWrapper: {
     padding: '16px',
+    maxWidth: '100%',
   },
   priceWrapper: {
     display: 'flex',
