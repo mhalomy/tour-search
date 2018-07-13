@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LazyLoad from 'react-lazy-load';
 
 class TourImage extends Component {
 
@@ -6,13 +7,19 @@ class TourImage extends Component {
     const {tour} = props;
     return (
       <div>
-        <div>
-          <img src={tour.tour_image} style={{width: 232}} alt="" />
-        </div>
+        <LazyLoad>
+          <img
+            src={tour.tour_image}
+            style={{width: 232}}
+            alt={`${tour.tour_name} Tour`} />
+        </LazyLoad>
 
-        <div>
-          <img src={tour.map_image} style={{width: 232}} alt="" />
-        </div>
+        <LazyLoad>
+          <img
+            src={tour.map_image}
+            style={{width: 232}}
+            alt={`${tour.tour_name} - ${tour.destinations.length} destinations`} />
+        </LazyLoad>
       </div>
     );
   }

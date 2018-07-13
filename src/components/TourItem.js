@@ -8,8 +8,10 @@ const TourItem = (props) => {
   return (
     <div style={styles.wrapper} >
       <TourImage tour={tour} />
-      <TourInfo tour={tour} />
-      <TourPriceAndLength tour={tour} />
+      <div style={styles.infoWrapper} >
+        <TourInfo tour={tour} />
+        <TourPriceAndLength tour={tour} />
+      </div>
     </div>
   );
 }
