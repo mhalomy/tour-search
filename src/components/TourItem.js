@@ -20,7 +20,6 @@ const styles = {
   wrapper: {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
     minHeight: '246px',
     background: 'white',
     marginBottom: '28px',
@@ -30,6 +29,8 @@ const styles = {
   infoWrapper: {
     display: 'flex',
     flexWrap: 'wrap',
+    flexGrow: '1',
+    justifyContent: 'space-between',
   }
 }
 

@@ -52,7 +52,7 @@ class TourInfo extends Component {
 
 const styles = {
   mainWrapper: {
-    padding: '16px'
+    padding: '16px',
   },
   labelAndValueWrapper: {
     display: 'flex',

@@ -25,10 +25,13 @@ const styles = {
   mainWrapper: {
     padding: '16px',
     maxWidth: '100%',
+    justifyContent: 'flex-end',
+    flexGrow: '1',
   },
   priceWrapper: {
     display: 'flex',
     marginBottom: '15px',
+    justifyContent: 'space-between',
   },
   fromItems: {
     display: 'flex',
