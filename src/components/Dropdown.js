@@ -2,15 +2,14 @@ import React from 'react';
 
 const Dropdown = (props) => {
   const {onChange, value} = props;
-  console.log(props)
   return (
     <div style={styles.wrapper}>
-      <select style={styles.selectStyle} onChange={onChange} value={value} >
+      <label>Sort by <select style={styles.selectStyle} onChange={onChange} value={value} >
         <option value="lowestPrice">Lowest price first</option>
         <option value="highestPrice">Highest price first</option>
         <option value="longestTour">Longest tour first</option>
         <option value="shortestTour">Shortest tour first</option>
-      </select>
+      </select></label>
     </div>
     );
 }
