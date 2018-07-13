@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Search from './components/Search';
 import Result from './components/Result';
+import Dropdown from './components/Dropdown';
 
 String.prototype.capitalize = function() {
   return this.charAt(0).toUpperCase() + this.slice(1);
@@ -15,7 +16,7 @@ class App extends Component {
       result: [],
       price: 0,
       duration: 0,
-      filter: ''
+      sort: 'lowestPrice',
     };
   }
 
@@ -48,6 +49,10 @@ class App extends Component {
     }
   }
 
+  onSortChange(event) {
+    this.setState({sort: event.target.value})
+  }
+
   render() {
     return (
       <div>
@@ -56,6 +61,8 @@ class App extends Component {
           placeholder="Where do you want to go?"
           onChange={this.onTermChange.bind(this)}
           onKeyPress={this.onKeyPress.bind(this)} />
+
+        <Dropdown onChange={this.onSortChange.bind(this)} value={this.state.sort} />
 
         <Result {...this.state} />
 
